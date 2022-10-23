@@ -6,7 +6,12 @@ function App() {
   useEffect(() => {
     const color = getComputedStyle(document.documentElement).getPropertyValue('--logo-color');
     console.log(color);
+
   }, [])
+
+  function setColor (newColor){
+    document.documentElement.style.setProperty('--logo-color', newColor);
+  }
 
   return (
     <div className="App">
@@ -19,14 +24,11 @@ function App() {
         <p>
           Hello from v1!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>
+          <button onClick={() => setColor('orange')}> orange </button>
+          <button onClick={() => setColor('blueviolet')}>blueviolet</button>
+          <button onClick={() => setColor('red')}>red</button>
+        </p>
       </header>
     </div>
   );
