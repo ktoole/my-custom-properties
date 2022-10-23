@@ -1,6 +1,7 @@
 :root{
   --logo-color: #FF5F15;
   --logo-size: 40vmin;
+  --logo-spinSpeed: 20s;
 }
 
 body {
